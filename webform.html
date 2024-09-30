@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Questions?</title>
+    </head>
+    <body>
+        <h1>Questions?</h1>
+        <section>
+            <p>If you have any questions feel free to reach out!</p>
+        </section> 
+        <form name="webform" action="index.html" onsubmit="checkemail(event)" method="post">
+            <link rel="stylesheet" href="Performance.css">
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname"><br>
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname"><br>
+            <label for="email">Enter your Email:</label>
+            <input type="email" id="email" class="email1"><br>
+            <label for="email2">Confirm your Email:</label>
+            <input type="email" id="email2" class="email3"><br>
+            <label for="question">Your Question:</label>
+            <input type="textarea" id="question" name="question" rows="5" cols="10">
+            <input type="submit" value="Submit">
+        </form>
+        <nav>
+            <a href="index.html">Home</a><br>
+            <a href="Olympia.html">Olympia</a><br>
+            <a href="Spokane.html">Spokane</a><br>
+            <a href="Seattle.html">Seattle</a><br>
+            <a href="sources.html">Citations</a>
+        </nav>
+    </body>
+    <script>
+        function checkemail(event) {
+        let x =document.getElementById("email").value;
+        let y =document.getElementById("email2").value;
+        if (x!==y) {
+            alert("Emails do not match!")
+        }
+    }
+    </script>
+</html>
